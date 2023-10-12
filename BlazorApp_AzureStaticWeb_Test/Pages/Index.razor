@@ -9,17 +9,26 @@ Welcome to your new app.
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
-<br/>
+<br />
 
 <button class="btn btn-primary" @onclick="GetPublicIp">Get Public IP</button>
-@if(!string.IsNullOrEmpty(ip))
+@if (!string.IsNullOrEmpty(ip))
 {
-    <br/>
-    <br/>
+    <br />
+    <br />
     <h5>Your public ip is: @ip</h5>
 }
+<div>
+    <br/>
+    <h5>Test images loading from gitee...</h5>
+    <br/>
+    <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-1.jpg" alt="image1" />
+    <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-2.jpg" alt="image2" />
+    <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-3.jpg" alt="image3" />
+    <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-4.jpg" alt="image4" />
+</div>
 
-@code{
+@code {
     string ip;
     string url = "https://api.ipify.org/?format=json";
     async Task GetPublicIp()
@@ -30,6 +39,6 @@ Welcome to your new app.
 
     class IpModel
     {
-        public string ip{ get; set; }
+        public string ip { get; set; }
     }
 }
