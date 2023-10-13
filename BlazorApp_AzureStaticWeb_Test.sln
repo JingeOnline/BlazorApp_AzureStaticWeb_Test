@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp_AzureStaticWeb_Test", "BlazorApp_AzureStaticWeb_Test\BlazorApp_AzureStaticWeb_Test.csproj", "{6BA4F40F-D0C9-44D4-BD79-20A2E8FBB296}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp_AzureStaticWeb_Test", "BlazorApp_AzureStaticWeb_Test\BlazorApp_AzureStaticWeb_Test.csproj", "{6BA4F40F-D0C9-44D4-BD79-20A2E8FBB296}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

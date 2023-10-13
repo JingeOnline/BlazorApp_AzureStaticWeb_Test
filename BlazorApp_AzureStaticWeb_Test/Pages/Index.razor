@@ -1,32 +1,55 @@
 ﻿@page "/"
 @inject HttpClient httpClient;
+@using BlazorApp_AzureStaticWeb_Test.Pages.IndexPage
 
 <PageTitle>Index</PageTitle>
+<div>
+    <CarouselComponent />
 
-<h1>Hello, world!</h1>
+    <div class="my-lg-5 my-3 container-fluid">
+        <div class="row">
+            <div class="col gx-5">
+                <h3 class="text-center">Azure</h3>
+                <img src="imgs/camera4.jpg" class="img-thumbnail" alt=".." />
+                <img src="imgs/camera5.jpg" class="img-thumbnail" alt=".." />
+                <img src="imgs/camera6.jpg" class="img-thumbnail" alt=".." />
+                <img src="imgs/camera7.jpg" class="img-thumbnail" alt=".." />
+            </div>
+            <div class="col">
+                <h3 class="text-center">Gitee</h3>
+                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera4.jpg" class="img-thumbnail" alt=".." />
+                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera5.jpg" class="img-thumbnail" alt=".." />
+                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera6.jpg" class="img-thumbnail" alt=".." />
+                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera7.jpg" class="img-thumbnail" alt=".." />
+            </div>
+        </div>
+    </div>
+    @*     <h1>Hello, world!</h1>
 
-Welcome to your new app.
+    Welcome to your new app.
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+    <SurveyPrompt Title="How is Blazor working for you?" />
 
-<br />
+    <br />
 
-<button class="btn btn-primary" @onclick="GetPublicIp">Get Public IP</button>
-@if (!string.IsNullOrEmpty(ip))
-{
+    <button class="btn btn-primary" @onclick="GetPublicIp">Get Public IP</button>
+    @if (!string.IsNullOrEmpty(ip))
+    {
     <br />
     <br />
     <h5>Your public ip is: @ip</h5>
-}
-<div>
-    <br/>
+    }
+    <div>
+    <br />
     <h5>Test images loading from gitee...</h5>
-    <br/>
+    <br />
     <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-1.jpg" alt="image1" />
     <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-2.jpg" alt="image2" />
     <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-3.jpg" alt="image3" />
     <img src="https://gitee.com/jingeonline/test/raw/master/food-middle-4.jpg" alt="image4" />
+    </div> *@
 </div>
+
 
 @code {
     string ip;
