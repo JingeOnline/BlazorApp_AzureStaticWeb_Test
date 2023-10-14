@@ -2,28 +2,31 @@
 @inject HttpClient httpClient;
 @using BlazorApp_AzureStaticWeb_Test.Pages.IndexPage
 
-<PageTitle>Index</PageTitle>
-<div>
+<PageTitle>测试网站-主页</PageTitle>
+<div class="my-theme-color-light">
     <CarouselComponent />
-
-    <div class="my-lg-5 my-3 container-fluid">
-        <div class="row">
-            <div class="col gx-5">
-                <h3 class="text-center">Azure</h3>
-                <img src="imgs/camera4.jpg" class="img-thumbnail" alt=".." />
-                <img src="imgs/camera5.jpg" class="img-thumbnail" alt=".." />
-                <img src="imgs/camera6.jpg" class="img-thumbnail" alt=".." />
-                <img src="imgs/camera7.jpg" class="img-thumbnail" alt=".." />
-            </div>
-            <div class="col">
-                <h3 class="text-center">Gitee</h3>
-                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera4.jpg" class="img-thumbnail" alt=".." />
-                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera5.jpg" class="img-thumbnail" alt=".." />
-                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera6.jpg" class="img-thumbnail" alt=".." />
-                <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera7.jpg" class="img-thumbnail" alt=".." />
-            </div>
-        </div>
+    <WelcomeComponent />
+    <RecentAlbumsComponent/>
+    <CommonQuestionsComponent/>
+    <BottomComponent/>
+    @*     <div class="my-lg-5 my-3 container-fluid">
+    <div class="row">
+    <div class="col gx-5">
+    <h3 class="text-center">Azure</h3>
+    <img src="imgs/camera4.jpg" class="img-thumbnail" alt=".." />
+    <img src="imgs/camera5.jpg" class="img-thumbnail" alt=".." />
+    <img src="imgs/camera6.jpg" class="img-thumbnail" alt=".." />
+    <img src="imgs/camera7.jpg" class="img-thumbnail" alt=".." />
     </div>
+    <div class="col">
+    <h3 class="text-center">Gitee</h3>
+    <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera4.jpg" class="img-thumbnail" alt=".." />
+    <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera5.jpg" class="img-thumbnail" alt=".." />
+    <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera6.jpg" class="img-thumbnail" alt=".." />
+    <img src="https://gitee.com/jingeonline/test/raw/master/%E4%B8%BB%E9%A1%B5-Carousel/camera7.jpg" class="img-thumbnail" alt=".." />
+    </div>
+    </div>
+    </div> *@
     @*     <h1>Hello, world!</h1>
 
     Welcome to your new app.

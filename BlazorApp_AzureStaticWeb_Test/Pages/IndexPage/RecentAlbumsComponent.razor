@@ -1,0 +1,72 @@
+﻿<div class="text-center py-3">
+    <h2>佳作欣赏</h2>
+    <div class="w-50 mx-auto mt-5">
+        <p>
+            'We cannot thank you enough for the most amazing photographs of our wedding day. You really took our breaths away - I can not believe how many magical moments you managed to capture. Thank you so much for being the greatest photographer we could ever ask for. You didn't miss a beat and the photographs are everything we could have hoped for and so so much more.'
+        </p>
+        <p>
+            Alexia & Pete
+        </p>
+    </div>
+</div>
+<div class="container-lg text-center">
+    <div class="row row-cols-2 g-2 g-xl-5">
+        <a href="javascript:;" class="link-unstyled col p-xl-5 p-md-2 " onclick="@(()=>showBigImage(bigUrl_1))">
+            <div class="rounded-4 hover-zoom shadow p-xl-3 p-2 bg-white">
+                <img src="https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_3_sm.jpg"
+                     class="img-fluid rounded-4 w-100" alt="..." />
+                <h5 class="mt-3 fw-bold">标题字段</h5>
+                <small>这里是描述信息字段</small>
+            </div>
+        </a>
+
+        <a href="javascript:;" class="link-unstyled col p-xl-5 p-md-2" onclick="@(()=>showBigImage(bigUrl_2))">
+            <div class="rounded-4 hover-zoom shadow p-xl-3 p-2 bg-white">
+                <img src="https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_5_sm.jpg"
+                     class="img-fluid rounded-4 w-100" alt="..." />
+                <h5 class="mt-3 fw-bold">标题字段</h5>
+                <small>这里是描述信息字段</small>
+            </div>
+        </a>
+        <a href="javascript:;" class="link-unstyled col p-xl-5 p-md-2" onclick="@(()=>showBigImage(bigUrl_3))">
+            <div class="rounded-4 hover-zoom shadow p-xl-3 p-2 bg-white">
+                <img src="https://gitee.com/jingeonline/test/raw/master/Albums/album-2/album_2_pic_2_sm.jpg"
+                     class="img-fluid rounded-4 w-100" alt="..." />
+                <h5 class="mt-3 fw-bold">标题字段</h5>
+                <small>这里是描述信息字段</small>
+            </div>
+        </a>
+        <a href="javascript:;" class="link-unstyled col p-xl-5 p-md-2 " onclick="@(()=>showBigImage(bigUrl_4))">
+            <div class="rounded-4 hover-zoom shadow p-xl-3 p-2 bg-white">
+                <img src="https://gitee.com/jingeonline/test/raw/master/Albums/album-2/album_2_pic_5_sm.jpg"
+                     class="img-fluid rounded-4 w-100" alt="..." />
+                <div />
+                <h5 class="mt-3 fw-bold">标题字段</h5>
+                <small>这里是描述信息字段</small>
+            </div>
+        </a>
+    </div>
+</div>
+<PopupModalComponent @ref="popup">
+
+</PopupModalComponent>
+@* srcset="https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_3_sm.jpg 800w,https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_3.jpg 1500w" *@
+@* srcset="https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_5_sm.jpg 800w,https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_5.jpg 1500w" *@
+@* srcset="https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_2_pic_2_sm.jpg 800w,https://gitee.com/jingeonline/test/raw/master/Albums/album-2/album_2_pic_2.jpg 1500w" *@
+@* srcset="https://gitee.com/jingeonline/test/raw/master/Albums/album-2/album_2_pic_5_sm.jpg 800w,https://gitee.com/jingeonline/test/raw/master/Albums/album-2/album_2_pic_5.jpg 1500w" *@
+
+
+@code {
+    string bigUrl_1 = "https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_3.jpg";
+    string bigUrl_2 = "https://gitee.com/jingeonline/test/raw/master/Albums/album-1/album_1_pic_5.jpg";
+    string bigUrl_3 = "https://gitee.com/jingeonline/test/raw/master/Albums/album-2/album_2_pic_2.jpg";
+    string bigUrl_4 = "https://gitee.com/jingeonline/test/raw/master/Albums/album-2/album_2_pic_5.jpg";
+    string popUpImageUrl;
+
+    PopupModalComponent popup;
+
+    void showBigImage(string url)
+    {
+        popup.OpenImage(url);
+    }
+}

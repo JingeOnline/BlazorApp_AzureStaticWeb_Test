@@ -1,0 +1,51 @@
+﻿<div class="modal @modalClass" tabindex="-1" role="dialog" style="display:@modalDisplay; overflow-y: auto;">
+    <div class="modal-dialog modal-xl modal-dialog-centered " role="document">
+        <div class="modal-content bg-transparent border-0">
+            <img src="@ImageUrl" alt="..." />
+            <button type="button" aria-label="Close" onclick="@(()=>Close())" 
+                class="btn mt-3 mx-auto btn-outline-light btn-lg" 
+                style="width:300px">
+                <span aria-hidden="true">X</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+@if (showBackdrop)
+{
+    <div class="modal-backdrop fade show"></div>
+}
+
+@code {
+    // [Parameter]
+    public string ImageUrl { get; set; }
+    private string modalDisplay = "none;";
+    private string modalClass = "";
+    private bool showBackdrop = false;
+
+    public void Open()
+    {
+        modalDisplay = "block;";
+        modalClass = "show";
+        showBackdrop = true;
+        StateHasChanged();
+    }
+
+    public void Close()
+    {
+        modalDisplay = "none";
+        modalClass = "";
+        showBackdrop = false;
+        StateHasChanged();
+    }
+
+    public void OpenImage(string url)
+    {
+        ImageUrl = url;
+        modalDisplay = "block;";
+        modalClass = "show";
+        showBackdrop = true;
+        StateHasChanged();
+    }
+}
+
