@@ -46,7 +46,7 @@ img.img-fit-cover {
 }
 /*鼠标进入后，元素放大*/
 .hover-zoom:hover {
-    transform: scale(1.03);
+    transform: scale(1.05);
     z-index: 2;
     transition-duration: 300ms;
 }
