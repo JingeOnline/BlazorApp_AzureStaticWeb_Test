@@ -1,5 +1,6 @@
 ﻿@using System.Diagnostics;
 @inject HttpClient httpClient;
+@inject IJSRuntime jsRuntime
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
     <div class="carousel-indicators">
@@ -56,12 +57,13 @@
     </button>
 </div>
 
-<script>
-    // 没有这段代码，幻灯片的第一页不支持触摸翻页（其他页面正常），而且自动滚动也失效。
-    var myCarousel = document.querySelector('#carouselExampleIndicators')
-    var carousel = new bootstrap.Carousel(myCarousel)
-</script>
 
 @code {
-
+    //不能直接把js代码写在razor文件中，否则编译的时候会报错。只能放在wwwroot静态文件夹下。然后用C#方法去调用这个JS代码。
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        //手动激活幻灯片的第一张图片，否则手机端无法滑动，且自动放映不起作用。
+        jsRuntime.InvokeVoidAsync("activateCarousel");
+    }
 }
